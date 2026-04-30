@@ -1,24 +1,22 @@
-// src/lib/firebase/config.js
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // Para la base de datos
-import { getAuth } from "firebase/auth";           // Para el login
-import { getStorage } from "firebase/storage";     // Para subir imágenes
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDTJ81zZfaP_mpw4kxV0tI1ZXI8PcGMpdU",
-    authDomain: "yofre-al-toque.firebaseapp.com",
-    projectId: "yofre-al-toque",
-    storageBucket: "yofre-al-toque.firebasestorage.app",
-    messagingSenderId: "1012232274898",
-    appId: "1:1012232274898:web:c18e0867a802176277fe0b"
+  apiKey: "AIzaSyBhYws7CavB3geGTvFyhdrB8485q0ywAHo",
+  authDomain: "nexo-tecnica.firebaseapp.com",
+  projectId: "nexo-tecnica",
+  storageBucket: "nexo-tecnica.firebasestorage.app",
+  messagingSenderId: "316059157738",
+  appId: "1:316059157738:web:0fc9b383fee55918788393",
+  measurementId: "G-ZYVX7BPJTM"
 };
 
-// Inicializar Firebase (evita errores si se recarga la página)
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-
-// Inicializar servicios
+// Initialize Firebase (evitando inicializaciones duplicadas en Next.js)
+const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
-export { app, db, auth, storage };
+export { db, auth, storage };
