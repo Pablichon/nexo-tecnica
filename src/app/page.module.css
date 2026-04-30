@@ -1,0 +1,219 @@
+/* CONTENEDOR PRINCIPAL: La magia para que parezca App */
+.mainContainer {
+  max-width: 500px;
+  /* Ancho máximo tipo celular */
+  margin: 0 auto;
+  /* Centrado en la pantalla */
+  min-height: 100vh;
+  background-color: #fffaf0;
+  /* Fondo cremita suave */
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 40px;
+}
+
+/* 1. HEADER */
+.header {
+  text-align: center;
+  padding: 20px 20px 10px 20px;
+}
+
+.logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 2. BANNER DE OFERTAS (Estilo Tarjeta Redondeada) */
+.bannerContainer {
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.bannerCard {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  /* Altura fija para que no se aplaste */
+  border-radius: 20px;
+  /* Bordes bien redondos */
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* La imagen llena el espacio sin deformarse */
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+.tag {
+  background-color: #f59e0b;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.bannerTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.bannerText {
+  font-size: 0.9rem;
+  margin: 5px 0 15px 0;
+  opacity: 0.9;
+  max-width: 200px;
+}
+
+.bannerButton {
+  background-color: #f59e0b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* 3. TÍTULOS Y GRILLA */
+.sectionTitle {
+  font-size: 1.4rem;
+  color: #111827;
+  margin: 35px 20px 20px 20px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.viewAllButton {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  color: #f97316;
+  border: 2px solid #f97316;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 15px 16px 25px 16px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.1);
+  text-transform: uppercase;
+}
+
+.viewAllButton:active {
+  transform: scale(0.96);
+  background-color: #fff7ed;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.15);
+}
+
+.viewAllButton svg {
+  transition: transform 0.3s ease;
+}
+
+.viewAllButton:hover svg {
+  transform: translateX(5px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* SIEMPRE 2 COLUMNAS */
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.card {
+  position: relative;
+  height: 185px; /* Aumentado de 160px */
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:active {
+  transform: scale(0.97);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+/* Oscurecer un poco la imagen para que se lea el texto */
+.cardImage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.cardIcon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  width: 42px; /* Aumentado */
+  height: 42px; /* Aumentado */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem; /* Aumentado */
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cardTitle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}

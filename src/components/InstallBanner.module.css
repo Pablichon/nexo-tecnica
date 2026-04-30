@@ -1,0 +1,211 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 50;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.bannerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 51;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card {
+    background-color: #F8FAFC;
+    width: 100%;
+    max-width: 56rem;
+    /* max-w-4xl */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* shadow-md */
+    padding: 1.5rem;
+    /* p-6 */
+    position: relative;
+    font-family: var(--font-nunito), sans-serif;
+}
+
+.contentParams {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .contentParams {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.iconWrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.houseIcon {
+    width: 3.5rem;
+    /* w-14 */
+    height: 3.5rem;
+    /* h-14 */
+    background-color: #DBEAFE;
+    /* bg-blue-100 */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.plusBadge {
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: #22c55e;
+    /* bg-green-500 */
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.textBlock {
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    font-weight: 700;
+    color: #111827;
+    /* text-gray-900 */
+    font-size: 1.125rem;
+    /* text-lg */
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: #4B5563;
+    /* text-gray-600 */
+    font-size: 0.875rem;
+    /* text-sm */
+    line-height: 1.375;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .actions {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.installButton {
+    background-color: #22c55e;
+    /* bg-green-500 */
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.installButton:hover {
+    background-color: #16a34a;
+    /* bg-green-600 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.installButton:active {
+    transform: scale(0.98);
+}
+
+.closeButton {
+    padding: 0.5rem;
+    color: #9CA3AF;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+@media (min-width: 640px) {
+    .closeButton {
+        align-self: center;
+    }
+}
+
+.closeButton:hover {
+    color: #4B5563;
+    background-color: #E5E7EB;
+}
+
+.trustText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #6B7280;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,382 @@
+.container {
+    min-height: 100vh;
+    background-color: #f7fafc;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 16px;
+    }
+    
+    .headerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .userInfo {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+.logoutBtn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.statsGrid {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.statCard {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.statIcon {
+    font-size: 40px;
+}
+
+.statNumber {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0;
+}
+
+.statLabel {
+    color: #718096;
+    margin: 4px 0 0 0;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+.sectionTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.emptyState {
+    background: white;
+    border-radius: 12px;
+    padding: 48px;
+    text-align: center;
+    color: #718096;
+    font-size: 18px;
+}
+
+.negociosList {
+    display: grid;
+    gap: 16px;
+}
+
+.negocioCard {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.negocioCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.negocioHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.negocioNombre {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a202c;
+    margin: 0;
+}
+
+.negocioRubro {
+    background-color: #e0f2fe;
+    color: #0070f3;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.negocioInfo {
+    margin-bottom: 16px;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.negocioInfo p {
+    margin: 4px 0;
+}
+
+.negocioInfo a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.negocioInfo a:hover {
+    text-decoration: underline;
+}
+
+.fecha {
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+.negocioActions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btnEdit {
+    background-color: #fbbf24;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnEdit:hover {
+    background-color: #f59e0b;
+    transform: translateY(-1px);
+}
+
+.btnAprobar {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnAprobar:hover {
+    background-color: #059669;
+    transform: translateY(-1px);
+}
+
+.btnRechazar {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnRechazar:hover {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.spinner {
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal de Edición */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalContent h2 {
+    margin: 0 0 24px 0;
+    font-size: 24px;
+    color: #1a202c;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btnSave {
+    flex: 1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnSave:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btnCancel {
+    flex: 1;
+    background-color: #e2e8f0;
+    color: #2d3748;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnCancel:hover {
+    background-color: #cbd5e0;
+}
+
+.searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}

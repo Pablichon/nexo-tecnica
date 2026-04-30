@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Admins – solo usuarios autenticados (se asume que el uid está en la colección admins)
+    match /admins/{adminId} {
+      allow read, write: if request.auth != null && request.auth.uid == adminId;
+    }
+
+    // Ofertas – solo lectura pública
+    match /ofertas/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+
+
+    // Campañas Temáticas Mensuales (NUEVO)
+    match /campaigns/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Negocios – lectura pública, creación pública (moderada), edición solo admin
+    match /negocios/{docId} {
+      allow read, create: if true;
+      allow update, delete: if request.auth != null;
+    }
+
+    // Analytics – permite crear eventos sin autenticación
+    match /analytics_events/{docId} {
+      allow create: if true;               
+      allow read:   if request.auth != null; 
+      allow update, delete: if false;      
+    }
+
+    // Regla por defecto – deniega todo lo que no esté arriba
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

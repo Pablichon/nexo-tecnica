@@ -1,0 +1,23 @@
+{
+  "name": "Nexo Técnica",
+  "short_name": "NexoTecnica",
+  "description": "Tu portal de servicios y proveedores industriales especializados",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0284C7",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

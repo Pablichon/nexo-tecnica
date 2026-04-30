@@ -1,0 +1,42 @@
+.publishSection {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    margin-top: var(--spacing-lg);
+}
+
+.question {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.publishButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.publishButton:hover {
+    background: rgba(255, 159, 10, 0.1);
+    transform: translateY(-1px);
+}
+
+.publishButton:active {
+    transform: translateY(0);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

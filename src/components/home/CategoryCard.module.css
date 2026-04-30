@@ -1,0 +1,78 @@
+.card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1.05;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(149, 107, 70, 0.15);
+}
+
+.card:active {
+    transform: scale(0.96);
+}
+
+.imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.6) 100%);
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: var(--spacing-md);
+    color: white;
+}
+
+.iconWrapper {
+    background: var(--primary);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-xs);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
