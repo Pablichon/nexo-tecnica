@@ -1,9 +1,9 @@
-// src/components/MainLayout.js
 'use client';
 
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from 'react';
+import AIChatAssistant from "@/components/AIChatAssistant";
 
 export default function MainLayout({ children }) {
   const [count, setCount] = useState(0);
@@ -104,6 +104,7 @@ export default function MainLayout({ children }) {
         {children}
       </div>
 
+      <AIChatAssistant />
       <Footer />
     </>
   );

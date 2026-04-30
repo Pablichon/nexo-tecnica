@@ -15,6 +15,10 @@ import styles from './admin.module.css';
 import AnalyticsPanel from '@/components/AnalyticsPanel';
 import MediaUpload from '@/components/publicar-negocio/MediaUpload';
 
+// Configuración de colores industriales para el admin
+const THEME_COLOR = '#0284C7';
+const THEME_ACCENT = '#0F172A';
+
 export default function AdminDashboard() {
     const router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -55,14 +59,12 @@ export default function AdminDashboard() {
     const [isCompressing, setIsCompressing] = useState(false);
 
     const [offerData, setOfferData] = useState({
-        titulo: '',
-        negocioId: '',
         negocioNombre: '',
         whatsapp: '',
         precioOriginal: '',
-        precioOferta: '',
+        precioReferencia: '',
         imagenUrl: '',
-        diasValidez: '5',
+        diasValidez: '30',
         descripcion: '',
         stock: '',
         vistas: '0',
@@ -773,7 +775,7 @@ export default function AdminDashboard() {
         <div className={styles.container}>
             <header className={styles.header}>
                 <div className={styles.headerContent}>
-                    <h1 className={styles.title}>🔐 Panel de Administración</h1>
+                    <h1 className={styles.title}>⚙️ Gestión de Proveedores - NEXO TÉCNICA</h1>
                     <div className={styles.userInfo}>
 
                         <button
@@ -790,7 +792,7 @@ export default function AdminDashboard() {
                                 fontWeight: 'bold'
                             }}
                         >
-                            ➕ Crear Oferta
+                            ➕ Publicar Servicio/Suministro
                         </button>
                         <button
                             onClick={handleSeedOfertas}

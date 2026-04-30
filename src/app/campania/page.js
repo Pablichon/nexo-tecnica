@@ -39,7 +39,7 @@ export default function CampaniaPage() {
             Especiales / Campaña Actual
           </span>
           <h1 style={{ fontSize: '18px', fontWeight: '900', color: '#111827', margin: 0 }}>
-            Ver Promos en el Barrio
+            Catálogo de Servicios Técnicos
           </h1>
         </div>
       </header>
@@ -54,8 +54,8 @@ export default function CampaniaPage() {
         color: '#9ca3af', 
         fontSize: '13px' 
       }}>
-        <p>Promociones válidas por tiempo limitado o hasta agotar stock.</p>
-        <Link href="/" style={{ color: '#f97316', fontWeight: 'bold', textDecoration: 'none', marginTop: '8px', display: 'inline-block' }}>
+        <p>Servicios y suministros técnicos para la industria.</p>
+        <Link href="/" style={{ color: '#0284C7', fontWeight: 'bold', textDecoration: 'none', marginTop: '8px', display: 'inline-block' }}>
           Volver al Inicio
         </Link>
       </footer>
