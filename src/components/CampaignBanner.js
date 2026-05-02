@@ -195,13 +195,15 @@ function CampaignOfferModal({ offer, onClose, accentColor, onWhatsApp }) {
   );
 }
 
-export default function CampaignBanner({ campaignId = "actual", isHeroOnly = false }) {
-  const [campaign, setCampaign] = useState(null);
-  const [loading, setLoading] = useState(true);
+export default function CampaignBanner({ campaignId = "actual", isHeroOnly = false, initialData = null }) {
+  const [campaign, setCampaign] = useState(initialData);
+  const [loading, setLoading] = useState(!initialData);
   const [imgError, setImgError] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState(null);
 
   useEffect(() => {
+    if (initialData) return; // Si ya tenemos datos del servidor, no hace falta el fetch inicial o caché
+    
     const CACHE_KEY = `nexo-campaign-${campaignId}`;
     const CACHE_TIME = 1000 * 60 * 5; // 5 minutos de caché (para que cambios desde admin se reflejen rápido)
 

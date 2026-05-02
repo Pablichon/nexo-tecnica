@@ -1,11 +1,43 @@
-'use client';
-
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import CampaignBanner from '@/components/CampaignBanner';
 import styles from '../page.module.css';
+import { db } from "@/lib/firebase/config";
+import { doc, getDoc } from "firebase/firestore";
 
-export default function CampaniaPage() {
+async function getCampaignData(campaignId) {
+  try {
+    const docRef = doc(db, "campaigns", campaignId);
+    const docSnap = await getDoc(docRef);
+    
+    if (docSnap.exists()) {
+      const rawData = docSnap.data();
+      return { 
+        id: docSnap.id, 
+        title: rawData.title || '',
+        subtitle: rawData.subtitle || '',
+        backgroundImage: rawData.backgroundImage || '',
+        accentColor: rawData.accentColor || '#f97316',
+        offers: (rawData.offers || []).map(o => ({
+          id: o.id || '',
+          businessName: o.businessName || '',
+          description: o.description || '',
+          price: o.price || '',
+          whatsappLink: o.whatsappLink || '',
+          imagen: o.imagen || ''
+        }))
+      };
+    }
+    return null;
+  } catch (error) {
+    console.error("Error fetching campaign server-side:", error);
+    return null;
+  }
+}
+
+export default async function CampaniaPage() {
+  const campaignData = await getCampaignData("actual");
+
   return (
     <main className={styles.mainContainer} style={{ minHeight: '100vh', background: '#fafafb' }}>
       
@@ -44,8 +76,8 @@ export default function CampaniaPage() {
         </div>
       </header>
 
-      {/* COMPONENTE EN MODO FULL (BANDNER + GRID) */}
-      <CampaignBanner campaignId="actual" isHeroOnly={false} />
+      {/* COMPONENTE EN MODO FULL (BANDNER + GRID) CON DATOS PRECARGADOS */}
+      <CampaignBanner campaignId="actual" isHeroOnly={false} initialData={campaignData} />
 
       {/* FOOTER PEQUEÑO */}
       <footer style={{ 

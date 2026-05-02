@@ -3,7 +3,11 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState, useEffect } from 'react';
-import AIChatAssistant from "@/components/AIChatAssistant";
+import dynamic from 'next/dynamic';
+
+const AIChatAssistant = dynamic(() => import("@/components/AIChatAssistant"), {
+  ssr: false, // No lo necesitamos en el servidor
+});
 
 export default function MainLayout({ children }) {
   const [count, setCount] = useState(0);
@@ -55,9 +59,12 @@ export default function MainLayout({ children }) {
           justifyContent: 'space-between'
         }}>
 
-          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            {/* TODO: Reemplazar logo */}
-            <span style={{ fontSize: '20px', fontWeight: '800', color: '#1E293B', letterSpacing: '-0.5px' }}>NEXO <span style={{ color: '#0284C7' }}>TÉCNICA</span></span>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <img 
+              src="/logo.png" 
+              alt="Nexo Técnica Logo" 
+              style={{ height: '40px', width: 'auto' }} 
+            />
           </Link>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
