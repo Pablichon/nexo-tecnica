@@ -1,103 +1,56 @@
-# Estado del Proyecto - Yofre al Toque (Next.js Version) 🚀
+# Estado del Proyecto - NEXO TÉCNICA ⚙️
 
-Este documento refleja el estado actual del desarrollo en la carpeta `web/`.
+Este documento refleja el estado actual del desarrollo de la plataforma de vinculación industrial.
 
-## ✅ Implementado (Versión Next.js 15)
+## ✅ Implementado (Versión Nexo Técnica)
 
 ### 1. Core & Arquitectura
 - [x] **Framework**: Next.js 15.1.0 (App Router).
 - [x] **Estilos**: Tailwind CSS 4.x + Vanilla CSS para componentes específicos.
 - [x] **Estructura Base**: `src/app`, `src/components`, `src/lib`.
+- [x] **Branding**: Transición completada de "Yofre al Toque" a **NEXO TÉCNICA**.
 
 ### 2. Navegación y Rutas
-- [x] **Home (`/`)**: Landing page principal funcionado.
-- [x] **Layout Principal**: Navbar y Footer integrados en `layout.js`.
-- [x] **Publicar Negocio (`/publicar-negocio`)**: Formulario con diseño final "Figura 2" (Hero durazno, pasos espaciados).
-- [x] **Búsqueda (`/negocios`, `/buscar`)**: Rutas creadas para funcionalidad de búsqueda.
-- [x] **Rubros (`/rubro/[slug]`)**: Página dinámica para categorías.
-- [x] **Detalle Comercio (`/comercio/[id]`)**: Página dinámica para perfil de negocio.
-- [x] **Admin (`/admin`)**: Panel de administración (estructura base).
-- [x] **Favoritos (`/favoritos`)**: Ruta para gestión de favoritos.
-- [x] **Términos y Condiciones (`/terminos-condiciones`)**: Página legal.
-- [x] **Ofertas (`/ofertas`)**: Página de ofertas con carrusel y tarjetas detalladas.
+- [x] **Home (`/`)**: Landing page industrial con Hero dinámico y categorías técnicas.
+- [x] **Layout Principal**: Navbar y Footer integrados con identidad visual azul industrial.
+- [x] **Publicar Negocio (`/publicar-negocio`)**: Formulario para nuevos proveedores.
+- [x] **Búsqueda (`/negocios`, `/buscar`)**: Funcionalidad de búsqueda filtrada.
+- [x] **Detalle Proveedor (`/negocio/[id]`)**: Perfil técnico con metadatos SEO dinámicos y contacto WhatsApp.
+- [x] **Admin (`/admin`)**: Panel de gestión para moderación de negocios y ofertas.
+- [x] **Ofertas (`/ofertas`)**: Pestaña de suministros y servicios en promoción con diseño industrial.
 
-### 3. Componentes UI
-- [x] **Navbar**: Logo Yofre, buscador y botón "+ Sumar Negocio".
-- [x] **Footer**: Pie de página estándar.
-- [x] **Categorías**: Componentes de visualización en Home.
-- [x] **Tarjeta Oferta**: Componente reutilizable con diseño premium y responsive.
+### 3. Inteligencia Artificial (Fase 2 🚧)
+- [x] **Asistente Técnico**: Integración con Google Gemini (Vercel AI SDK).
+- [x] **Tool `buscarEmpresas`**: Búsqueda de proveedores por rubro directamente en Firestore.
+- [x] **Tool `buscarOfertas`**: Capacidad de consultar suministros y promociones vigentes.
+- [x] **Tono**: Ajustado a un perfil profesional, técnico y ejecutivo.
+
+### 4. Componentes UI & UX
+- [x] **Design System**: Colores industriales (`#0284C7`, `#0F172A`).
+- [x] **Favoritos**: Sistema funcional con persistencia en `localStorage` (clave: `nexo_favoritos`).
+- [x] **Featured Carousel**: Carrusel de ofertas destacadas en Home y sección Ofertas.
 
 ## 🚧 En Progreso / Pendiente
 
-### 1. Integración Backend (Firebase)
-- [x] **Persistencia**: Conectar formulario de "Publicar Negocio" a Firestore.
-- [ ] **Configuración**: Verificar conexión en `src/lib/firebase`.
-- [ ] **Autenticación**: Implementar login real en `/admin` y usuarios.
+### 1. Limpieza de Identidad (Fase 1 🛠️)
+- [x] Actualizar claves de LocalStorage (`nexo_favoritos`).
+- [x] Limpiar metadatos dinámicos en perfiles.
+- [x] Actualizar plantillas de mensajes de WhatsApp.
+- [ ] Eliminar archivos de imagen legacy (`logo-yofre.png`) y referencias en CSS secundario.
 
-### 2. UI/UX Premium (Refinamiento con Skills)
-- [ ] **Design System**: Unificar radios de borde ("Squircle") y sombras.
-- [ ] **Mobile Touch**: Optimizar áreas de toque en Navbar y Listados.
-- [ ] **Glassmorphism**: Aplicar efectos de vidrio consistentes en cards y headers.
-- [x] **Publicar Negocio**:
-  - [x] Refactorización completa de la UI para coincidir con diseño "Figura 2".
-  - [x] Implementación de Hero strip color durazno (`#FFF0E6`).
-  - [x] Pasos de beneficios con iconos grandes y espaciado generoso (`space-y-8`).
-  - [x] Formulario minimalista centrado con `max-w-[480px]` y bordes redondeados.
-  - [x] Navbar global visible.
-  - [x] Ajustes finales de espaciado y márgenes visuales (Header, Steps, Button).
-- [x] **Sección Ofertas**:
-  - [x] Carrusel "Ofertas Bomba" con scroll horizontal fluido.
-  - [x] Tarjetas de oferta responsive con badge de descuento y cuenta regresiva.
-  - [x] Grid de "Todas las Ofertas" que se adapta a desktop/mobile.
-  - [x] Navegación clickeable a detalle de comercio.
+### 2. Refinamiento Industrial
+- [ ] **Data Cleaning**: Reemplazar datos de prueba (comida/barrio) por datos reales de servicios industriales.
+- [ ] **SEO Técnico**: Mejorar indexación de páginas de rubros específicos.
+- [ ] **Mobile Optimization**: Revisar áreas de toque en el panel de administración.
 
-### 3. Limpieza y Optimización
-- [ ] **Migración Completa**: Confirmar que no queda lógica útil en la versión Vanilla JS antigua.
-- [ ] **SEO**: Implementar Metadata dinámica en páginas de detalle (`generateMetadata`).
+### 3. Próximos Pasos Prioritarios
+1. **Autenticación de Usuarios**: 
+   - [ ] Implementar login para usuarios finales para sincronizar favoritos en la nube.
+   - [ ] Perfil de empresa autogestionado (para que los proveedores actualicen sus datos).
+2. **Mejoras en IA**: 
+   - [ ] Integrar RAG (Retrieval Augmented Generation) para responder dudas técnicas sobre normativas o procesos industriales comunes.
+3. **Módulo de Cotizaciones**: 
+   - [ ] Permitir a los usuarios solicitar presupuestos a múltiples proveedores de un mismo rubro con un solo click.
 
-### Próximos Pasos Prioritarios
-1. **Integración con Firebase**: 
-   - [x] Conectar el formulario de "Publicar Negocio" con Firestore real.
-   - [x] **Panel de Admin**: Crear vista para aprobar/rechazar negocios.
-   - [x] **Sección Ofertas**: Conectada a Firestore con datos reales.
-   - [x] **Gestión Manual de Ofertas**: Formulario admin para crear ofertas desde el panel.
-   - [x] **Seed de Datos**: Botones para cargar negocios y ofertas de prueba.
-2. **SEO Básico**: 
-   - [x] Configurar metadatos dinámicos en páginas de detalle.
-   - [x] Agregar título y descripción OpenGraph en Layout.
-3. **Mejoras en Servicios**: 
-   - [x] Agregar categorías/subrubros específicos para servicios.
-4. **Contacto Institucional**: 
-   - [x] Agregar link o sección de contacto con Yofre al Toque en el footer o menú.
-   - [x] Página dedicada `/contacto` sin marca personal excesiva.
-
-### Sistema de Ofertas Completo ✅
-- [x] Hook `useOfertas` para leer ofertas desde Firestore
-- [x] Página `/ofertas` con carrusel y grid responsive
-- [x] Formulario admin para crear ofertas manualmente
-- [x] Selector de negocios aprobados
-- [x] Cálculo automático de fechas de vencimiento
-- [x] Botón de seed para cargar datos de prueba
-
-## 📋 Próximos Pasos (Agendados)
-
-### 3. Sistema de Favoritos Funcional ✅ **COMPLETADO**
-- [x] Hook `useFavorites` con localStorage
-- [x] Página `/favoritos` con diseño premium  
-- [x] Botón de favorito funcional en página de detalle (`/negocio/[id]`)
-- [x] Botón flotante circular arriba a la derecha
-- [x] Botón grande "Guardar/Guardado" junto a WhatsApp
-- [x] Indicador con badge en el navbar que se actualiza en tiempo real
-- [x] Gestión completa (agregar, quitar, limpiar todo)
-- [x] Estado empty state cuando no hay favoritos
-- [x] Persistencia entre sesiones con localStorage
-- [x] Sistema de eventos para actualizar el contador automáticamente
-
-**Ubicación:** `/negocio/[id]/page.js` - Favoritos completamente funcionales
-
-### 4. Autenticación de Usuarios
-- [ ] Sistema de login/registro para usuarios finales
-- [ ] Perfil de usuario
-- [ ] Historial de interacciones
-- [ ] Favoritos por usuario sincronizados (Firebase)
-
+---
+*Última actualización: 1 de Mayo, 2026*

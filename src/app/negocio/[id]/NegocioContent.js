@@ -11,7 +11,7 @@ export default function NegocioContent({ negocioInicial }) {
     useEffect(() => {
         if (!negocio) return;
         try {
-            const stored = localStorage.getItem('yofre_favoritos');
+            const stored = localStorage.getItem('nexo_favoritos');
             if (stored) {
                 const favoritos = JSON.parse(stored);
                 setIsFavorite(favoritos.some(fav => fav.id === negocio.id));
@@ -32,7 +32,7 @@ export default function NegocioContent({ negocioInicial }) {
         if (!negocio) return;
 
         try {
-            const stored = localStorage.getItem('yofre_favoritos');
+            const stored = localStorage.getItem('nexo_favoritos');
             let favoritos = stored ? JSON.parse(stored) : [];
 
             if (isFavorite) {
@@ -53,7 +53,7 @@ export default function NegocioContent({ negocioInicial }) {
                 });
             }
 
-            localStorage.setItem('yofre_favoritos', JSON.stringify(favoritos));
+            localStorage.setItem('nexo_favoritos', JSON.stringify(favoritos));
             setIsFavorite(!isFavorite);
             window.dispatchEvent(new Event('favoritesChanged'));
         } catch (error) {
@@ -154,7 +154,7 @@ export default function NegocioContent({ negocioInicial }) {
 
                         {negocio.whatsapp && (
                             <a
-                                href={`https://wa.me/549${negocio.whatsapp}?text=${encodeURIComponent('Hola, Vi tu perfil en YOFRE AL TOQUE y quería consultarte...')}`}
+                                href={`https://wa.me/549${negocio.whatsapp}?text=${encodeURIComponent('Hola, Vi tu perfil en NEXO TÉCNICA y quería consultarte...')}`}
                                 target="_blank"
                                 onClick={handleWhatsAppClick}
                                 style={{

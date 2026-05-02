@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const FAVORITES_KEY = 'yofre_favoritos';
+const FAVORITES_KEY = 'nexo_favoritos';
 
 export function useFavorites() {
     const [favorites, setFavorites] = useState([]);

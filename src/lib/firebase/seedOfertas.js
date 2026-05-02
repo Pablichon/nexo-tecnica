@@ -4,75 +4,51 @@ import { collection, addDoc, Timestamp } from 'firebase/firestore';
 
 const ofertasMock = [
     {
-        titulo: "2x1 en Lomitos Completos",
-        negocioNombre: "Lomitos El Beto",
-        negocioId: "1", // ID temporal o real si existe
-        precioOriginal: 12000,
-        precioOferta: 6000,
-        descuento: "50%",
-        imagenUrl: "https://images.unsplash.com/photo-1561758033-d8f19662cb5d?q=80&w=2574&auto=format&fit=crop",
-        fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)), // 5 días
-        estado: 'activa'
-    },
-    {
-        titulo: "20% OFF en Corte + Barba",
-        negocioNombre: "Barbería Yofre",
-        negocioId: "2",
-        precioOriginal: 5000,
-        precioOferta: 4000,
+        titulo: "Pack 100hs Tornería CNC",
+        negocioNombre: "Metalúrgica Córdoba S.A.",
+        negocioId: "demo-1",
+        precioOriginal: 850000,
+        precioOferta: 680000,
         descuento: "20%",
-        imagenUrl: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2670&auto=format&fit=crop",
+        imagenUrl: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop",
         fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 10 * 24 * 60 * 60 * 1000)), // 10 días
+        fechaFin: Timestamp.fromDate(new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)),
         estado: 'activa'
     },
     {
-        titulo: "Docena de Empanadas Gratis",
-        negocioNombre: "Pizzería Don Luis",
-        negocioId: "3",
-        precioOriginal: 8000,
-        precioOferta: 0,
-        descuento: "100%",
-        imagenUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=2581&auto=format&fit=crop",
+        titulo: "Service Completo de Puente Grúa",
+        negocioNombre: "Electromecánica Industrial RTS",
+        negocioId: "demo-2",
+        precioOriginal: 250000,
+        precioOferta: 195000,
+        descuento: "22%",
+        imagenUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop",
         fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)), // 3 días
+        fechaFin: Timestamp.fromDate(new Date(Date.now() + 15 * 24 * 60 * 60 * 1000)),
         estado: 'activa'
     },
     {
-        titulo: "Limpieza Dental Completa",
-        negocioNombre: "Consultorio Odontológico",
-        negocioId: "4",
-        precioOriginal: 15000,
-        precioOferta: 10000,
-        descuento: "33%",
-        imagenUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2670&auto=format&fit=crop",
+        titulo: "Kit PLC Siemens S7-1200 + IHM",
+        negocioNombre: "Automatismos y Control Global",
+        negocioId: "demo-3",
+        precioOriginal: 1200000,
+        precioOferta: 1050000,
+        descuento: "12%",
+        imagenUrl: "https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?q=80&w=1000&auto=format&fit=crop",
         fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 15 * 24 * 60 * 60 * 1000)), // 15 días
+        fechaFin: Timestamp.fromDate(new Date(Date.now() + 20 * 24 * 60 * 60 * 1000)),
         estado: 'activa'
     },
     {
-        titulo: "Cambio de Aceite + Filtros",
-        negocioNombre: "Lubricentro Norte",
-        negocioId: "5",
-        precioOriginal: 45000,
-        precioOferta: 38000,
-        descuento: "15%",
-        imagenUrl: "https://images.unsplash.com/photo-1487754180477-db33d345f55e?q=80&w=2670&auto=format&fit=crop",
+        titulo: "20% OFF en Insumos de Soldadura",
+        negocioNombre: "Suministros Industriales El Norte",
+        negocioId: "demo-4",
+        precioOriginal: 50000,
+        precioOferta: 40000,
+        descuento: "20%",
+        imagenUrl: "https://images.unsplash.com/photo-1581092162384-8987c1794714?q=80&w=1000&auto=format&fit=crop",
         fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 20 * 24 * 60 * 60 * 1000)), // 20 días
-        estado: 'activa'
-    },
-    {
-        titulo: "Manicura Semipermanente",
-        negocioNombre: "Estética Bella",
-        negocioId: "6",
-        precioOriginal: 8000,
-        precioOferta: 6000,
-        descuento: "25%",
-        imagenUrl: "https://images.unsplash.com/photo-1632345031635-fe1564dc9113?q=80&w=2670&auto=format&fit=crop",
-        fechaInicio: Timestamp.now(),
-        fechaFin: Timestamp.fromDate(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)), // 7 días
+        fechaFin: Timestamp.fromDate(new Date(Date.now() + 10 * 24 * 60 * 60 * 1000)),
         estado: 'activa'
     }
 ];

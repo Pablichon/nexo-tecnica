@@ -2,11 +2,11 @@ import { Suspense } from 'react';
 import OfertasContent from './OfertasContent';
 
 export const metadata = {
-    title: 'Ofertas del Día',
-    description: 'Encontrá los mejores descuentos y promociones en Barrio Yofre. ¡Ahorrá en tus compras diarias con Yofre al Toque!',
+    title: 'Ofertas y Suministros Industriales',
+    description: 'Encontrá los mejores descuentos en suministros y servicios técnicos especializados en Nexo Técnica.',
     openGraph: {
-        title: 'Ofertas del Día en Barrio Yofre | Yofre al Toque',
-        description: 'Descuentos exclusivos en carnicerías, verdulerías, servicios y más en tu barrio.',
+        title: 'Ofertas Industriales | Nexo Técnica',
+        description: 'Descuentos exclusivos en herramientas, mantenimiento y servicios técnicos para la industria.',
     }
 };
 

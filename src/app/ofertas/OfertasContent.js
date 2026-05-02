@@ -28,7 +28,7 @@ function OfferModal({ oferta, onClose, revelados, toggleRevelado }) {
 
     if (!oferta) return null;
 
-    const imageUrl = oferta.imagen || oferta.imagenUrl || '/images/logo-yofre.png';
+    const imageUrl = oferta.imagen || oferta.imagenUrl || '/logo.png';
 
     return (
         <div
@@ -93,7 +93,7 @@ function OfferModal({ oferta, onClose, revelados, toggleRevelado }) {
                             objectFit: 'contain'
                         }}
                         onError={(e) => {
-                            e.target.src = '/images/logo-yofre.png';
+                            e.target.src = '/logo.png';
                         }}
                     />
                 </div>
@@ -172,52 +172,52 @@ function OfferModal({ oferta, onClose, revelados, toggleRevelado }) {
 const DEMO_OFFERS = [
     {
         id: 'demo-1',
-        titulo: 'Conjunto Divanos Premium',
-        negocioNombre: 'COLCHONERÍA YOFRE',
-        imagen: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1000&auto=format&fit=crop',
-        descripcion: 'Conjunto completo de sommier + colchón king size de primera calidad. Incluye almohadas y entrega gratuita.',
-        precioOferta: 275000,
-        precioOriginal: 392500,
-        diasRestantes: 7,
+        titulo: 'Mantenimiento Preventivo CNC',
+        negocioNombre: 'INGENIERÍA METALÚRGICA S.A.',
+        imagen: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop',
+        descripcion: 'Servicio completo de mantenimiento preventivo para centros de mecanizado. Incluye calibración y limpieza de guías.',
+        precioOferta: 450000,
+        precioOriginal: 600000,
+        diasRestantes: 15,
         whatsapp: '5493515555555',
-        vistas: 12,
-        stock: 3
+        vistas: 45,
+        stock: 5
     },
     {
         id: 'demo-2',
-        titulo: 'Divan Cheets 2 Plazas',
-        negocioNombre: 'COLCHONERÍA YOFRE',
-        imagen: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=1000&auto=format&fit=crop',
-        descripcion: 'Divan de 2 plazas tapizado en chenille premium con cajones de almacenamiento. Ideal para espacios pequeños.',
-        precioOferta: 275000,
-        precioOriginal: 392500,
-        diasRestantes: 7,
+        titulo: 'Tablero Eléctrico Industrial',
+        negocioNombre: 'SOLUCIONES ELÉCTRICAS S.R.L.',
+        imagen: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop',
+        descripcion: 'Diseño y armado de tablero eléctrico bajo normas IEC. Incluye componentes de primera marca.',
+        precioOferta: 850000,
+        precioOriginal: 1100000,
+        diasRestantes: 20,
         whatsapp: '5493515555555',
-        vistas: 12
+        vistas: 32
     },
     {
         id: 'demo-3',
-        titulo: 'Lavado Dental Completo',
-        negocioNombre: 'CONSULTORIO ODONTOLÓGICO',
-        imagen: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1000&auto=format&fit=crop',
-        descripcion: 'Limpieza dental profunda con ultrasonido + pulido + aplicación de flúor. Atención personalizada.',
-        precioOferta: 10000,
-        precioOriginal: 15000,
+        titulo: 'Corte Láser de Precisión',
+        negocioNombre: 'CORTE Y PLEAGADO CÓRDOBA',
+        imagen: 'https://images.unsplash.com/photo-1530124560676-4fbc912f7160?q=80&w=1000&auto=format&fit=crop',
+        descripcion: 'Servicio de corte láser en chapa de hasta 12mm. Presupuesto sin cargo. Entrega en 48hs.',
+        precioOferta: 15000,
+        precioOriginal: 22000,
         diasRestantes: 5,
         whatsapp: '5493515555556',
-        vistas: 10
+        vistas: 58
     },
     {
         id: 'demo-4',
-        titulo: 'Cambio de Aceite + Filtros',
-        negocioNombre: 'LUBRICENTRO NORTE',
-        imagen: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1000&auto=format&fit=crop',
-        descripcion: 'Servicio completo de cambio de aceite sintético + filtro de aceite + filtro de aire. Todas las marcas.',
-        precioOferta: 38000,
-        precioOriginal: 45000,
-        diasRestantes: 10,
+        titulo: 'Auditoría de Eficiencia Energética',
+        negocioNombre: 'ENERGY SOLUTIONS',
+        imagen: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000&auto=format&fit=crop',
+        descripcion: 'Análisis detallado del consumo energético en planta. Informe con plan de ahorro garantizado.',
+        precioOferta: 120000,
+        precioOriginal: 180000,
+        diasRestantes: 30,
         whatsapp: '5493515555557',
-        vistas: 8
+        vistas: 24
     }
 ];
 
@@ -331,7 +331,7 @@ export default function OfertasContent() {
             return;
         }
 
-        const message = `¡Hola! Me interesa la oferta de "${title}" que vi en Yofre al Toque.`;
+        const message = `¡Hola! Me interesa el servicio de "${title}" que vi en NEXO TÉCNICA.`;
         window.open(`https://wa.me/${finalPhone}?text=${encodeURIComponent(message)}`, '_blank');
     };
 
@@ -365,7 +365,7 @@ export default function OfertasContent() {
                             <ChevronLeft size={28} />
                         </Link>
                         <h1 style={{ fontSize: '24px', fontWeight: '900', color: '#111827', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            🔥 Yofre al Toque <span style={{ color: '#f97316' }}>Ofertas</span>
+                            ⚙️ NEXO TÉCNICA <span style={{ color: '#0284C7' }}>OFERTAS</span>
                         </h1>
                     </div>
 
@@ -465,8 +465,8 @@ export default function OfertasContent() {
                             return (
                                 <div key={oferta.id} style={{ backgroundColor: 'white', borderRadius: '12px', padding: '12px', marginBottom: '12px', display: 'flex', gap: '12px', boxShadow: '0 1px 6px rgba(0,0,0,0.06)', cursor: 'pointer' }}>
                                     <div onClick={() => setSelectedOferta(oferta)} style={{ position: 'relative', width: '100px', height: '100px', flexShrink: 0, borderRadius: '8px', overflow: 'hidden', backgroundColor: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <img src={oferta.imagen || oferta.imagenUrl || '/images/logo-yofre.png'} alt={oferta.titulo} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} onError={(e) => e.target.src = '/images/logo-yofre.png'} />
-                                        {descuento > 0 && <div style={{ position: 'absolute', top: '6px', left: '6px', backgroundColor: '#f97316', color: 'white', padding: '4px 8px', borderRadius: '6px', fontSize: '11px', fontWeight: '800' }}>-{descuento}%</div>}
+                                        <img src={oferta.imagen || oferta.imagenUrl || '/logo.png'} alt={oferta.titulo} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} onError={(e) => e.target.src = '/logo.png'} />
+                                        {descuento > 0 && <div style={{ position: 'absolute', top: '6px', left: '6px', backgroundColor: '#0284C7', color: 'white', padding: '4px 8px', borderRadius: '6px', fontSize: '11px', fontWeight: '800' }}>-{descuento}%</div>}
                                     </div>
                                     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                                         <div>
@@ -490,8 +490,8 @@ export default function OfertasContent() {
             </div>
 
             <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 30 }}>
-                <button style={{ width: '64px', height: '64px', borderRadius: '50%', backgroundColor: '#f97316', border: 'none', boxShadow: '0 4px 16px rgba(249, 115, 22, 0.4)', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2px', color: 'white' }}>
-                    <Flame size={24} />
+                <button style={{ width: '64px', height: '64px', borderRadius: '50%', backgroundColor: '#0284C7', border: 'none', boxShadow: '0 4px 16px rgba(2, 132, 199, 0.4)', cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2px', color: 'white' }}>
+                    <TrendingUp size={24} />
                     <span style={{ fontSize: '9px', fontWeight: '700' }}>Ofertas</span>
                 </button>
             </div>

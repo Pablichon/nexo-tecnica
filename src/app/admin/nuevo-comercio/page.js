@@ -8,8 +8,11 @@ export default function NuevoComercioPage() {
                 <input placeholder="Nombre del Comercio" style={{ padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }} />
                 <select style={{ padding: '12px', borderRadius: '8px', border: '1px solid #ddd' }}>
                     <option>Seleccionar Rubro</option>
-                    <option value="almacen">Almacén</option>
-                    {/* ... */}
+                    <option value="mecanizado">Mecanizado y CNC</option>
+                    <option value="mantenimiento">Mantenimiento Industrial</option>
+                    <option value="automatizacion">Automatización y Control</option>
+                    <option value="suministros">Suministros Industriales</option>
+                    <option value="servicios-tecnicos">Ingeniería y Consultoría</option>
                 </select>
                 <button
                     style={{

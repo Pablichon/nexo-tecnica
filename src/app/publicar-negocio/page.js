@@ -82,9 +82,9 @@ export default function PublicarNegocioPage() {
                     </p>
                     <button
                         onClick={() => setSubmitted(false)}
-                        className="w-full mt-6 bg-[#0070f3] hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-colors"
+                        className="w-full mt-6 bg-[#0284C7] hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-colors"
                     >
-                        Cargar otro negocio
+                        Cargar otra empresa
                     </button>
                 </div>
             </main>
@@ -99,20 +99,19 @@ export default function PublicarNegocioPage() {
         <main className="min-h-screen bg-[#FFFDF7] pb-12">
 
 
-            {/* Header / Banner */}
-            <div className="max-w-[680px] mx-auto bg-[#FFF0E6] py-10 px-4 text-center border-b border-orange-100/50 rounded-[40px] mt-[118px]" style={{ marginBottom: '50px' }}>
+            <div className="max-w-[680px] mx-auto bg-[#F0F9FF] py-10 px-4 text-center border-b border-blue-100/50 rounded-[40px] mt-[118px]" style={{ marginBottom: '50px' }}>
                 <div className="max-w-3xl mx-auto">
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-[#F5A623] mb-6 leading-tight tracking-tight">
-                        ¡Hacé crecer tu negocio en el barrio!
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-[#0284C7] mb-6 leading-tight tracking-tight">
+                        ¡Sumá tu empresa a la red técnica más grande!
                     </h1>
                     <p className="text-[#4A4A4A] text-[19px] leading-relaxed font-medium mb-4">
-                        Conectá con vecinos listos para comprarte.
+                        Conectá con clientes industriales que buscan tus servicios.
                     </p>
                     <p className="text-[#2D2D2D] text-[17px] font-bold leading-relaxed mb-6">
-                        Activación mediante <span className="text-[#F5A623]">plan mensual accesible</span>.<br/>
-                        Sin comisiones ni intermediarios.
+                        Activación mediante <span className="text-[#0284C7]">suscripción profesional</span>.<br/>
+                        Sin comisiones por vinculación.
                     </p>
-                    <div className="text-4xl animate-bounce-slow">🚀</div>
+                    <div className="text-4xl animate-bounce-slow">⚙️</div>
                 </div>
             </div>
 
@@ -124,9 +123,9 @@ export default function PublicarNegocioPage() {
                     <div className="flex items-start gap-4" style={{ marginBottom: '32px' }}>
                         <span className="text-[32px] leading-none filter drop-shadow-sm select-none">👀</span>
                         <div className="pt-1.5">
-                            <h3 className="text-[17px] font-bold text-[#2D2D2D] mb-1">1. Más visibilidad</h3>
+                            <h3 className="text-[17px] font-bold text-[#2D2D2D] mb-1">1. Visibilidad Especializada</h3>
                             <p className="text-[#6B6B6B] text-[14px] leading-relaxed">
-                                Los vecinos ven tu negocio al buscar en la app.
+                                Aparecé en las búsquedas técnicas de jefes de planta y compradores.
                             </p>
                         </div>
                     </div>
@@ -134,9 +133,9 @@ export default function PublicarNegocioPage() {
                     <div className="flex items-start gap-4" style={{ marginBottom: '32px' }}>
                         <span className="text-[32px] leading-none filter drop-shadow-sm select-none">💬</span>
                         <div className="pt-1.5">
-                            <h3 className="text-[17px] font-bold text-[#2D2D2D] mb-1">2. Más consultas por WhatsApp</h3>
+                            <h3 className="text-[17px] font-bold text-[#2D2D2D] mb-1">2. Contacto Directo</h3>
                             <p className="text-[#6B6B6B] text-[14px] leading-relaxed">
-                                Recibís pedidos o consultas directo a tu celular.
+                                Recibí pedidos de cotización directo a tu WhatsApp corporativo.
                             </p>
                         </div>
                     </div>
@@ -161,15 +160,15 @@ export default function PublicarNegocioPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                         <label className="block text-[15px] font-bold text-[#4A4A4A] mb-2.5">
-                            Nombre del negocio
+                            Nombre de la empresa / profesional
                         </label>
                         <input
                             type="text"
                             name="nombre"
                             value={formData.nombre}
                             onChange={handleChange}
-                            placeholder="Ej. Verdulería El Pepe"
-                            className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#F5A623] focus:ring-4 focus:ring-[#F5A623]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
+                            placeholder="Ej. Metalúrgica Córdoba S.A."
+                            className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#0284C7] focus:ring-4 focus:ring-[#0284C7]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
                             required
                         />
                     </div>
@@ -183,7 +182,7 @@ export default function PublicarNegocioPage() {
                                 name="rubro"
                                 value={formData.rubro}
                                 onChange={handleChange}
-                                className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#F5A623] focus:ring-4 focus:ring-[#F5A623]/10 transition-all text-[#2D2D2D] text-lg shadow-sm appearance-none"
+                                className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#0284C7] focus:ring-4 focus:ring-[#0284C7]/10 transition-all text-[#2D2D2D] text-lg shadow-sm appearance-none"
                                 required
                             >
                                 <option value="">Seleccionar Rubro...</option>
@@ -202,7 +201,7 @@ export default function PublicarNegocioPage() {
                                     name="subrubro"
                                     value={formData.subrubro}
                                     onChange={handleChange}
-                                    className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#F5A623] focus:ring-4 focus:ring-[#F5A623]/10 transition-all text-[#2D2D2D] text-lg shadow-sm appearance-none"
+                                    className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#0284C7] focus:ring-4 focus:ring-[#0284C7]/10 transition-all text-[#2D2D2D] text-lg shadow-sm appearance-none"
                                 >
                                     <option value="">Seleccionar especialidad (opcional)...</option>
                                     {subcategories.map(sub => (
@@ -227,7 +226,7 @@ export default function PublicarNegocioPage() {
                                 value={formData.whatsapp}
                                 onChange={handleChange}
                                 placeholder="351 123 4567"
-                                className="w-full p-[18px] pl-16 bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#F5A623] focus:ring-4 focus:ring-[#F5A623]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
+                                className="w-full p-[18px] pl-16 bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#0284C7] focus:ring-4 focus:ring-[#0284C7]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
                                 required
                             />
                         </div>
@@ -242,8 +241,8 @@ export default function PublicarNegocioPage() {
                             name="direccion"
                             value={formData.direccion}
                             onChange={handleChange}
-                            placeholder="Ej. Yofre Norte"
-                            className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#F5A623] focus:ring-4 focus:ring-[#F5A623]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
+                            placeholder="Ej. Parque Industrial Ferreyra"
+                            className="w-full p-[18px] bg-white border border-[#E5E5E5] rounded-[20px] outline-none focus:border-[#0284C7] focus:ring-4 focus:ring-[#0284C7]/10 transition-all text-[#2D2D2D] placeholder-[#A0A0A0] text-lg shadow-sm"
                             required
                         />
                     </div>
@@ -259,10 +258,10 @@ export default function PublicarNegocioPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-[#0070f3] hover:bg-[#0060df] text-white font-bold py-[18px] rounded-[20px] shadow-[0_4px_14px_0_rgba(0,118,255,0.39)] hover:shadow-[0_6px_20px_rgba(0,118,255,0.23)] transform active:scale-[0.98] transition-all text-[18px] disabled:opacity-50"
+                            className="w-full bg-[#0284C7] hover:bg-[#0274b0] text-white font-bold py-[18px] rounded-[20px] shadow-[0_4px_14px_0_rgba(2,132,199,0.39)] hover:shadow-[0_6px_20px_rgba(2,132,199,0.23)] transform active:scale-[0.98] transition-all text-[18px] disabled:opacity-50"
                             style={{ color: '#ffffff' }}
                         >
-                            {loading ? 'Enviando...' : 'Activar mi negocio'}
+                            {loading ? 'Enviando...' : 'Activar mi empresa'}
                         </button>
                     </div>
                 </form>

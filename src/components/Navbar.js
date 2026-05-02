@@ -23,19 +23,15 @@ export default function Navbar() {
 
                 {/* Logo / Nombre */}
                 <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                    <Image
-                        src="/images/logo-yofre.png"
-                        alt="Yofre al Toque"
-                        width={120}
-                        height={40}
-                        style={{ objectFit: 'contain' }}
-                    />
+                    <div style={{ fontSize: '24px', fontWeight: '900', color: '#0F172A' }}>
+                        NEXO <span style={{ color: '#0284C7' }}>TÉCNICA</span>
+                    </div>
                 </Link>
 
                 {/* Enlaces */}
                 <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                     <Link href="/negocios" style={{ textDecoration: 'none', color: '#555', fontWeight: '500' }}>
-                        🔍 Ver Negocios
+                        🔍 Proveedores
                     </Link>
 
                     <Link href="/contacto" style={{ textDecoration: 'none', color: '#555', fontWeight: '500' }}>
@@ -44,15 +40,15 @@ export default function Navbar() {
 
                     <Link href="/publicar-negocio" style={{
                         textDecoration: 'none',
-                        backgroundColor: '#0070f3',
+                        backgroundColor: '#0284C7',
                         color: 'white',
                         padding: '10px 20px',
-                        borderRadius: '50px', // Más redondeado
+                        borderRadius: '8px', // Menos redondeado para look industrial
                         fontWeight: 'bold',
                         fontSize: '14px',
                         transition: 'background 0.3s'
                     }}>
-                        + Sumar Negocio
+                        + Sumar Empresa
                     </Link>
                 </div>
             </div>

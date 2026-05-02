@@ -14,13 +14,13 @@ export async function generateMetadata({ params }) {
             const negocio = docSnap.data();
             const description = negocio.descripcion
                 ? negocio.descripcion.substring(0, 160)
-                : `Conocé ${negocio.nombre} en Barrio Yofre. Rubro: ${negocio.rubro}. Contacto directo por WhatsApp.`;
+                : `Conocé ${negocio.nombre} en Nexo Técnica. Rubro: ${negocio.rubro}. Contacto directo por WhatsApp.`;
 
             return {
                 title: negocio.nombre,
                 description: description,
                 openGraph: {
-                    title: `${negocio.nombre} - Yofre al Toque`,
+                    title: `${negocio.nombre} - Nexo Técnica`,
                     description: description,
                     images: [negocio.imagen || '/logo.png'],
                 },
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
 
     return {
         title: 'Negocio',
-        description: 'Detalle del negocio en Yofre al Toque',
+        description: 'Detalle del negocio en Nexo Técnica',
     };
 }
 

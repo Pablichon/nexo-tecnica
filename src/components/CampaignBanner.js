@@ -202,7 +202,7 @@ export default function CampaignBanner({ campaignId = "actual", isHeroOnly = fal
   const [selectedOffer, setSelectedOffer] = useState(null);
 
   useEffect(() => {
-    const CACHE_KEY = `yofre-campaign-${campaignId}`;
+    const CACHE_KEY = `nexo-campaign-${campaignId}`;
     const CACHE_TIME = 1000 * 60 * 5; // 5 minutos de caché (para que cambios desde admin se reflejen rápido)
 
     // 1. Intentar cargar desde localStorage inmediatamente para una respuesta instantánea

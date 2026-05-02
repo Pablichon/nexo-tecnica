@@ -64,7 +64,7 @@ export default function InstallBanner() {
             {/* Botón flotante */}
             <button
                 onClick={handleClick}
-                aria-label="Instalá Yofre al Toque"
+                aria-label="Instalá Nexo Técnica"
                 style={{
                     position: "fixed",
                     bottom: "24px",
@@ -73,11 +73,11 @@ export default function InstallBanner() {
                     display: "flex",
                     alignItems: "center",
                     gap: "10px",
-                    backgroundColor: "#FF8C00",
+                    backgroundColor: "#0284C7",
                     color: "white",
                     borderRadius: "50px",
                     padding: "13px 20px 13px 14px",
-                    boxShadow: "0 4px 20px rgba(255,140,0,0.4), 0 2px 8px rgba(0,0,0,0.15)",
+                    boxShadow: "0 4px 20px rgba(2, 132, 199, 0.4), 0 2px 8px rgba(0,0,0,0.15)",
                     cursor: "pointer",
                     border: "none",
                     fontFamily: "var(--font-nunito), sans-serif",
@@ -96,7 +96,7 @@ export default function InstallBanner() {
                     alt=""
                     style={{ borderRadius: "6px", flexShrink: 0 }}
                 />
-                Instalá Yofre al Toque
+                Instalá Nexo Técnica
             </button>
 
             {/* Modal de instrucciones */}
@@ -133,10 +133,10 @@ export default function InstallBanner() {
                             <Image src="/icon-192x192.png" width={52} height={52} alt="Logo" style={{ borderRadius: "12px" }} />
                             <div>
                                 <h2 style={{ margin: 0, fontSize: "18px", fontWeight: "800", color: "#111827" }}>
-                                    Instalá Yofre al Toque
+                                    Instalá Nexo Técnica
                                 </h2>
                                 <p style={{ margin: "2px 0 0", fontSize: "13px", color: "#6b7280" }}>
-                                    Tené a mano las mejores ofertas de tu barrio
+                                    Tené a mano los mejores proveedores industriales
                                 </p>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ export default function InstallBanner() {
                             style={{
                                 marginTop: "24px", width: "100%",
                                 padding: "14px",
-                                backgroundColor: "#FF8C00", color: "white",
+                                backgroundColor: "#0284C7", color: "white",
                                 border: "none", borderRadius: "14px",
                                 fontSize: "16px", fontWeight: "700",
                                 cursor: "pointer",
@@ -199,7 +199,7 @@ function Step({ n, text }) {
         <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
             <span style={{
                 flexShrink: 0, width: "26px", height: "26px",
-                backgroundColor: "#FFF3E0", color: "#FF8C00",
+                backgroundColor: "#e0f2fe", color: "#0284C7",
                 borderRadius: "50%", display: "flex",
                 alignItems: "center", justifyContent: "center",
                 fontSize: "13px", fontWeight: "800",
