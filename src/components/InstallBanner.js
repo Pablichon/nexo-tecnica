@@ -89,13 +89,6 @@ export default function InstallBanner() {
                     WebkitTapHighlightColor: "transparent",
                 }}
             >
-                <Image
-                    src="/icon-192x192.png"
-                    width={26}
-                    height={26}
-                    alt=""
-                    style={{ borderRadius: "6px", flexShrink: 0 }}
-                />
                 Instalá Nexo Técnica
             </button>
 
@@ -130,7 +123,6 @@ export default function InstallBanner() {
 
                         {/* Cabecera */}
                         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
-                            <Image src="/icon-192x192.png" width={52} height={52} alt="Logo" style={{ borderRadius: "12px" }} />
                             <div>
                                 <h2 style={{ margin: 0, fontSize: "18px", fontWeight: "800", color: "#111827" }}>
                                     Instalá Nexo Técnica

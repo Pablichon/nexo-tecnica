@@ -16,7 +16,7 @@ const nunito = Nunito({
 });
 
 export const viewport = {
-  themeColor: "#F5A623",
+  themeColor: "#0284C7",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -70,15 +70,14 @@ export const metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/icon-192x192.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.ico',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} ${nunito.variable}`} style={{ backgroundColor: '#fffaf0', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <body className={`${inter.className} ${nunito.variable}`} style={{ backgroundColor: '#ffffff', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <MainLayout>
           {children}
         </MainLayout>
