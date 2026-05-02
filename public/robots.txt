@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /admin/*
 
-Sitemap: https://yofrealtoque.com.ar/sitemap.xml
+Sitemap: https://nexotecnica.com.ar/sitemap.xml
