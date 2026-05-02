@@ -45,12 +45,11 @@ function ListadoNegocios() {
     }, []);
 
     const rubroMap = {
-        'gastronomia': 'Gastronomía',
-        'servicios': 'Servicios',
-        'ropa-calzado': 'Ropa / Calzado',
-        'salud-belleza': 'Salud / Belleza / Bienestar',
-        'hogar-automotor': 'Hogar y Automotor',
-        'comercios': 'Negocios del Barrio'
+        'mecanizado': 'Mecanizado y CNC',
+        'mantenimiento': 'Mantenimiento Industrial',
+        'automatizacion': 'Automatización y Control',
+        'suministros': 'Suministros Industriales',
+        'servicios-tecnicos': 'Ingeniería y Consultoría'
     };
 
     const rubroNombre = rubroMap[filtroRubro] || filtroRubro;
@@ -97,7 +96,7 @@ function ListadoNegocios() {
                             handleSearchTracking();
                         }
                     }}
-                    style={{ width: '100%', padding: '12px 20px', fontSize: '16px', borderRadius: '50px', border: '1px solid #ddd', outline: 'none' }}
+                    style={{ width: '100%', padding: '12px 20px', fontSize: '16px', borderRadius: '4px', border: '1px solid #e2e8f0', outline: 'none' }}
                 />
             </div>
 
@@ -117,13 +116,13 @@ function ListadoNegocios() {
                             }}
                             style={{
                                 padding: '8px 16px',
-                                borderRadius: '20px',
-                                border: '1px solid #e0e0e0',
-                                background: busqueda === sub ? '#0070f3' : 'white',
-                                color: busqueda === sub ? 'white' : '#666',
+                                borderRadius: '4px',
+                                border: '1px solid #e2e8f0',
+                                background: busqueda === sub ? '#0F172A' : 'white',
+                                color: busqueda === sub ? 'white' : '#64748B',
                                 cursor: 'pointer',
                                 fontSize: '14px',
-                                fontWeight: '500',
+                                fontWeight: '600',
                                 transition: 'all 0.2s',
                                 whiteSpace: 'nowrap'
                             }}
@@ -141,12 +140,12 @@ function ListadoNegocios() {
                     {negociosA_Mostrar.map((negocio) => (
                         <Link key={negocio.id} href={`/negocio/${negocio.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div style={{
-                                border: '1px solid #ddd',
-                                borderRadius: '10px',
-                                overflow: 'hidden', // Importante para que la imagen no se salga
-                                boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+                                border: '1px solid #e2e8f0',
+                                borderRadius: '6px',
+                                overflow: 'hidden',
+                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
                                 backgroundColor: 'white',
-                                transition: 'transform 0.2s',
+                                transition: 'all 0.2s',
                                 height: '100%',
                                 display: 'flex',
                                 flexDirection: 'column'
@@ -161,8 +160,8 @@ function ListadoNegocios() {
                                 </div>
 
                                 <div style={{ padding: '20px', flex: 1 }}>
-                                    <h2 style={{ marginTop: 0, color: '#0070f3', fontSize: '1.2rem', marginBottom: '5px' }}>{negocio.nombre}</h2>
-                                    <span style={{ background: '#f0f0f0', padding: '4px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold', color: '#555' }}>
+                                    <h2 style={{ marginTop: 0, color: '#0F172A', fontSize: '1.2rem', marginBottom: '8px', fontWeight: '800' }}>{negocio.nombre}</h2>
+                                    <span style={{ background: '#F0F9FF', padding: '4px 8px', borderRadius: '2px', fontSize: '11px', fontWeight: '800', color: '#0369a1', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                                         {negocio.rubro}
                                     </span>
                                 </div>

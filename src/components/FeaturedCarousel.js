@@ -82,7 +82,7 @@ export default function FeaturedCarousel({ offers, onSelect, onWhatsApp, revelad
                     }}
                 >
                     <img 
-                        src={oferta.imagen || oferta.imagenUrl || '/images/logo-yofre.png'} 
+                        src={oferta.imagen || oferta.imagenUrl || FALLBACK_IMAGE} 
                         alt={oferta.titulo} 
                         style={{ 
                             position: 'absolute', 
@@ -93,7 +93,7 @@ export default function FeaturedCarousel({ offers, onSelect, onWhatsApp, revelad
                             objectFit: 'contain',
                             padding: '12px'
                         }} 
-                        onError={(e) => e.target.src = '/images/logo-yofre.png'} 
+                        onError={(e) => e.target.src = FALLBACK_IMAGE} 
                     />
                     
                     {/* Progress Bar */}

@@ -64,7 +64,7 @@ export default function NegocioContent({ negocioInicial }) {
     if (!negocio) return <div style={{ textAlign: 'center' }}>Negocio no encontrado</div>;
 
     return (
-        <div style={{ maxWidth: '800px', margin: '40px auto', padding: '0', backgroundColor: 'white', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)', overflow: 'hidden', position: 'relative' }}>
+        <div style={{ maxWidth: '800px', margin: '40px auto', padding: '0', backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)', overflow: 'hidden', position: 'relative', border: '1px solid #e2e8f0' }}>
 
             <button
                 onClick={handleToggleFavorite}
@@ -113,9 +113,9 @@ export default function NegocioContent({ negocioInicial }) {
                 )}
             </div>
 
-            <div style={{ padding: '30px' }}>
-                <h1 style={{ color: '#333', marginBottom: '10px', fontSize: '2.5rem' }}>{negocio.nombre}</h1>
-                <span style={{ backgroundColor: '#e0f2fe', color: '#0070f3', padding: '5px 12px', borderRadius: '15px', fontWeight: 'bold' }}>
+            <div style={{ padding: '30px', backgroundColor: '#ffffff' }}>
+                <h1 style={{ color: '#0F172A', marginBottom: '10px', fontSize: '2.5rem', fontWeight: '800' }}>{negocio.nombre}</h1>
+                <span style={{ backgroundColor: '#F0F9FF', color: '#0369a1', padding: '6px 12px', borderRadius: '4px', fontWeight: 'bold', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {negocio.rubro}
                 </span>
 
@@ -138,11 +138,11 @@ export default function NegocioContent({ negocioInicial }) {
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 gap: '8px',
-                                background: isFavorite ? '#FFF0F0' : 'white',
-                                color: isFavorite ? '#FF3B30' : '#666',
-                                border: `2px solid ${isFavorite ? '#FF3B30' : '#ddd'}`,
+                                background: isFavorite ? '#F0F9FF' : 'white',
+                                color: isFavorite ? '#0284C7' : '#64748B',
+                                border: `2px solid ${isFavorite ? '#0284C7' : '#e2e8f0'}`,
                                 padding: '15px 20px',
-                                borderRadius: '50px',
+                                borderRadius: '6px',
                                 fontSize: '16px',
                                 fontWeight: 'bold',
                                 cursor: 'pointer'
@@ -154,7 +154,7 @@ export default function NegocioContent({ negocioInicial }) {
 
                         {negocio.whatsapp && (
                             <a
-                                href={`https://wa.me/549${negocio.whatsapp}?text=${encodeURIComponent('Hola, Vi tu perfil en NEXO TÉCNICA y quería consultarte...')}`}
+                                href={`https://wa.me/549${negocio.whatsapp}?text=${encodeURIComponent('Hola, te contacto desde Nexo Técnica. Vi tu perfil industrial y quería consultarte por...')}`}
                                 target="_blank"
                                 onClick={handleWhatsAppClick}
                                 style={{
@@ -162,10 +162,10 @@ export default function NegocioContent({ negocioInicial }) {
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    backgroundColor: '#25D366',
+                                    backgroundColor: '#0F172A',
                                     color: 'white',
                                     padding: '15px 30px',
-                                    borderRadius: '50px',
+                                    borderRadius: '6px',
                                     textDecoration: 'none',
                                     fontWeight: 'bold',
                                     fontSize: '18px'

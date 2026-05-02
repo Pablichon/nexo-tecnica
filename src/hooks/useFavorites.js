@@ -8,15 +8,37 @@ export function useFavorites() {
     const [favorites, setFavorites] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Cargar favoritos del localStorage al montar
+    // Cargar favoritos del localStorage al montar con lógica de migración
     useEffect(() => {
         try {
-            const stored = localStorage.getItem(FAVORITES_KEY);
-            if (stored) {
-                setFavorites(JSON.parse(stored));
+            const OLD_KEY = 'yofre_favoritos';
+            const oldStored = localStorage.getItem(OLD_KEY);
+            let finalFavorites = [];
+
+            // 1. Intentar cargar los nuevos
+            const newStored = localStorage.getItem(FAVORITES_KEY);
+            if (newStored) {
+                finalFavorites = JSON.parse(newStored);
             }
+
+            // 2. Si hay viejos, migrarlos si no están ya en los nuevos
+            if (oldStored) {
+                const oldFavorites = JSON.parse(oldStored);
+                const currentIds = new Set(finalFavorites.map(f => f.id));
+                
+                const migrated = oldFavorites.filter(f => !currentIds.has(f.id));
+                if (migrated.length > 0) {
+                    finalFavorites = [...finalFavorites, ...migrated];
+                    localStorage.setItem(FAVORITES_KEY, JSON.stringify(finalFavorites));
+                }
+                
+                // 3. Limpiar el residuo antiguo
+                localStorage.removeItem(OLD_KEY);
+            }
+
+            setFavorites(finalFavorites);
         } catch (error) {
-            console.error('Error loading favorites:', error);
+            console.error('Error during favorites migration/loading:', error);
         } finally {
             setIsLoading(false);
         }

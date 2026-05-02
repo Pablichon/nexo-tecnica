@@ -19,7 +19,7 @@ export default function TerminosCondiciones() {
                 </div>
 
                 {/* Card principal con sombra mejorada */}
-                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <div className="bg-white rounded-md shadow-2xl overflow-hidden border border-gray-100">
 
                     {/* Barra de color superior */}
                     <div className="h-2 bg-gradient-to-r from-blue-600 via-blue-700 to-gray-800"></div>
@@ -29,7 +29,7 @@ export default function TerminosCondiciones() {
                         {/* Sección 1 */}
                         <section className="group">
                             <div className="flex items-start gap-4 mb-4">
-                                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-md flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                                     <span className="text-2xl">📱</span>
                                 </div>
                                 <div className="flex-1">
@@ -134,7 +134,7 @@ export default function TerminosCondiciones() {
 
                         {/* Footer de aceptación */}
                         <div className="mt-12 pt-8 border-t-2 border-dashed border-gray-200">
-                            <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-2xl p-6 text-center">
+                            <div className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-md p-6 text-center">
                                 <p className="text-gray-700 text-lg font-medium">
                                     ✓ Al utilizar <strong className="text-blue-600">Nexo Técnica</strong>, aceptas estos términos en su totalidad
                                 </p>

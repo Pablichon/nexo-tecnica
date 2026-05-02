@@ -31,8 +31,8 @@ export async function generateMetadata({ params }) {
     }
 
     return {
-        title: 'Negocio',
-        description: 'Detalle del negocio en Nexo Técnica',
+        title: 'Proveedor Técnico | Nexo Técnica',
+        description: 'Directorio especializado de proveedores industriales y servicios técnicos.',
     };
 }
 

@@ -9,19 +9,19 @@ import { Heart, MapPin, MessageCircle, Menu, Trash2, X } from 'lucide-react';
 const DEMO_FAVORITES = [
     {
         id: 'demo-1',
-        nombre: 'Bicicletería don Ramon',
-        rubro: 'SERVICIOS',
-        imagen: '/images/yellow-door.jpg', // Imagen de ejemplo
-        direccion: 'Alsina 258, Bº Yofre',
-        whatsapp: '5493515555555'
+        nombre: 'Metalúrgica Córdoba S.A.',
+        rubro: 'MECANIZADO',
+        imagen: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400', 
+        direccion: 'Parque Industrial Ferreyra, Córdoba',
+        whatsapp: '3515551234'
     },
     {
         id: 'demo-2',
-        nombre: 'Pizzería Don Pablo',
-        rubro: 'GASTRONOMÍA',
-        imagen: '/images/restaurant.jpg', // Imagen de ejemplo
-        direccion: 'Av. Capdevila 1234',
-        whatsapp: '5493515555556'
+        nombre: 'Automatismos Global',
+        rubro: 'AUTOMATIZACION',
+        imagen: 'https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?w=400',
+        direccion: 'B° San Martín, Córdoba',
+        whatsapp: '3515559900'
     }
 ];
 
@@ -38,7 +38,7 @@ export default function FavoritosPage() {
         return (
             <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center">
                 <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0284C7] mx-auto mb-4"></div>
                     <p className="text-gray-600">Cargando favoritos...</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function FavoritosPage() {
     }
 
     const handleWhatsApp = (whatsapp, nombre) => {
-        const message = encodeURIComponent(`Hola! Vi ${nombre} en Yofre al Toque y quería hacerte una consulta.`);
+        const message = encodeURIComponent(`Hola! Vi a ${nombre} en Nexo Técnica y quería hacer una consulta técnica.`);
         window.open(`https://wa.me/${whatsapp}?text=${message}`, '_blank');
     };
 
@@ -92,7 +92,7 @@ export default function FavoritosPage() {
                         </p>
                         <button
                             onClick={() => router.push('/negocios')}
-                            className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-bold transition-colors"
+                            className="bg-[#0284C7] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition-colors"
                         >
                             Explorar Negocios
                         </button>
@@ -103,8 +103,8 @@ export default function FavoritosPage() {
                             {displayFavorites.map((negocio) => (
                                 <div
                                     key={negocio.id}
-                                    className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
-                                    style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderRadius: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
+                                    className="bg-white rounded-md p-4 shadow-sm border border-gray-100"
+                                    style={{ display: 'flex', flexDirection: 'column', gap: '16px', borderRadius: '6px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
                                 >
                                     {/* SECCIÓN SUPERIOR: Imagen e Información */}
                                     <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
@@ -118,7 +118,7 @@ export default function FavoritosPage() {
                                                         backgroundImage: `url(${negocio.imagen})`,
                                                         backgroundSize: 'cover',
                                                         backgroundPosition: 'center',
-                                                        borderRadius: '12px',
+                                                        borderRadius: '4px',
                                                         border: '1px solid #f3f4f6'
                                                     }}
                                                 />
@@ -129,9 +129,9 @@ export default function FavoritosPage() {
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     justifyContent: 'center',
-                                                    backgroundColor: '#fff7ed', // orange-50
-                                                    borderRadius: '12px',
-                                                    border: '1px solid #ffedd5' // orange-100
+                                                    backgroundColor: '#f0f9ff', // blue-50
+                                                    borderRadius: '4px',
+                                                    border: '1px solid #bae6fd' // blue-100
                                                 }}>
                                                     <span style={{ fontSize: '30px' }}>🏪</span>
                                                 </div>
@@ -161,7 +161,7 @@ export default function FavoritosPage() {
                                                 </h3>
                                                 <Link
                                                     href={`/negocios?rubro=${negocio.rubro || ''}`}
-                                                    className="inline-block bg-yellow-300 hover:bg-yellow-400 text-gray-900 rounded px-2 py-0.5 transition-colors"
+                                                    className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-800 rounded px-2 py-0.5 transition-colors"
                                                     style={{ fontSize: '11px', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '6px', textDecoration: 'none' }}
                                                 >
                                                     {negocio.rubro}
@@ -197,7 +197,7 @@ export default function FavoritosPage() {
                                                 padding: '12px 16px',
                                                 backgroundColor: 'white',
                                                 border: '1px solid #e5e7eb',
-                                                borderRadius: '12px',
+                                                borderRadius: '6px',
                                                 color: '#374151',
                                                 fontSize: '14px',
                                                 fontWeight: '700'
@@ -216,9 +216,9 @@ export default function FavoritosPage() {
                                                     justifyContent: 'center',
                                                     gap: '8px',
                                                     padding: '12px 16px',
-                                                    backgroundColor: '#25D366', // WhatsApp green
+                                                    backgroundColor: '#0F172A', // Industrial Slate
                                                     color: 'white',
-                                                    borderRadius: '12px',
+                                                    borderRadius: '6px',
                                                     fontSize: '14px',
                                                     fontWeight: '700',
                                                     border: 'none',
@@ -237,9 +237,9 @@ export default function FavoritosPage() {
                         </div>
 
                         {/* Tip Banner */}
-                        <div style={{ marginTop: '24px', backgroundColor: '#FFF4E6', border: '1px solid #ffedd5', borderRadius: '16px', padding: '16px', display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                        <div style={{ marginTop: '24px', backgroundColor: '#F0F9FF', border: '1px solid #bae6fd', borderRadius: '6px', padding: '16px', display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
                             <div style={{ fontSize: '20px', flexShrink: 0 }}>💡</div>
-                            <p style={{ fontSize: '14px', color: '#7c2d12', fontWeight: '500', lineHeight: '1.5', margin: 0 }}>
+                            <p style={{ fontSize: '14px', color: '#0369a1', fontWeight: '500', lineHeight: '1.5', margin: 0 }}>
                                 <span style={{ fontWeight: '800' }}>Tip:</span> Puedes organizar tus favoritos arrastrándolos o eliminarlos rápidamente deslizando hacia la izquierda.
                             </p>
                         </div>
