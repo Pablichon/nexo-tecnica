@@ -35,11 +35,14 @@ export default function Home() {
 
   return (
     <main className={styles.mainContainer}>
-      {/* 1. CABECERA */}
       <header className={styles.header}>
         <h1 style={{ display: 'none' }}>Nexo Técnica - Proveedores y Servicios Industriales</h1>
-        <div style={{ fontSize: '32px', fontWeight: '900', color: '#0F172A', marginBottom: '8px' }}>
-          NEXO <span style={{ color: '#0284C7' }}>TÉCNICA</span>
+        <div style={{ marginBottom: '16px' }}>
+          <img 
+            src="/logo.png" 
+            alt="Nexo Técnica Logo" 
+            style={{ maxWidth: '300px', height: 'auto' }} 
+          />
         </div>
         <p className={styles.subtitle}>Conectando la industria con soluciones técnicas expertas</p>
       </header>

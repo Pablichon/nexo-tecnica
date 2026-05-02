@@ -23,9 +23,14 @@ export default function Navbar() {
 
                 {/* Logo / Nombre */}
                 <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                    <div style={{ fontSize: '24px', fontWeight: '900', color: '#0F172A' }}>
-                        NEXO <span style={{ color: '#0284C7' }}>TÉCNICA</span>
-                    </div>
+                    <Image 
+                        src="/logo.png" 
+                        alt="Nexo Técnica Logo" 
+                        width={180} 
+                        height={50} 
+                        priority
+                        style={{ objectFit: 'contain' }}
+                    />
                 </Link>
 
                 {/* Enlaces */}
